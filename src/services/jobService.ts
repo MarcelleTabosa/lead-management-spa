@@ -1,17 +1,23 @@
-import axios from 'axios';
-
-const API_URL = 'https://localhost:44309/api/job/relationships';
+import { JobProps } from "../pages/Lead/Props";
+import apiClient from "./apiClient";
 
 export const getJobs = async () => {
   try {
-    const response = await axios.get(API_URL, {
-      headers: {
-        accept: '*/*',
-      },
-    });
+    const response = await apiClient.get("/job/relationships");
     return response.data;
   } catch (error) {
     console.error('An error occurred while fetching lead data', error);
     throw error; 
   }
 };
+
+export const updateJob = async (job: JobProps) => {
+  try {
+    const response = await apiClient.put(`/job/${job.id}`, job);
+    return response.data;
+  } catch (error) {
+    console.error('An error occurred while fetching lead data', error);
+    throw error; 
+  }
+};
+

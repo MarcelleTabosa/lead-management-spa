@@ -26,8 +26,14 @@ const Lead: React.FC = () => {
   }, []);
 
   const filteredJobs = selectedTab === 'accepted'
-    ? jobs.filter(job => job.accepted)
-    : jobs.filter(job => !job.accepted);
+    ? jobs.filter(job => job.accepted == 1)
+    : jobs.filter(job => job.accepted == 0);
+
+  const updateJobStatus = (updatedJob: JobProps) => {
+    setJobs((prevJobs) =>
+      prevJobs.map((job) => (job.id === updatedJob.id ? updatedJob : job))
+    );
+  };
 
   return (
     <div className="lead">
@@ -45,7 +51,7 @@ const Lead: React.FC = () => {
         <div className="job-list">
           {filteredJobs.map(job => (
             <div className="job-card">
-              <Card job={job}></Card>
+              <Card job={job} onJobUpdate={updateJobStatus}></Card>
             </div>
           ))}
         </div>

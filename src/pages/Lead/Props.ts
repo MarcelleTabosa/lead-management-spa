@@ -1,18 +1,22 @@
 export type LeadProps = {
+    id: number;
     name: string;
-    phoneNumer: string;
+    phoneNumber: string;
     email: string;
   };
   
 export type CategoryProps = {
+    id: number;
     category: string;
 };
 
 export type JobProps = {
+    id: number;
+    createdIn: Date;
     description: string;
     suburb: string;
     price: number;
-    accepted: boolean;
+    accepted: number;
     jobCategory: CategoryProps;
     lead: LeadProps
 }
