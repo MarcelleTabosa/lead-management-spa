@@ -1,0 +1,71 @@
+body{
+  background-color: #eeeeee;
+}
+
+.lead {
+    padding: 20px;
+  }
+  
+.lead-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lead-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead-header p {
+  color: #666;
+}
+
+.lead-content {
+  margin-top: 20px;
+}
+
+.lead-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.tab-navigation button {
+  width: 50%;
+  padding: 15px 5px;
+  margin-right: 3px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.tab-navigation button::after {
+  content: '';
+  position: absolute;
+  left: 50%; 
+  bottom: -5px; 
+  width: 0; 
+  height: 3px; 
+  background-color: #eb7a1e; 
+  transition: width 0.5s, left 0.5s; 
+}
+
+.tab-navigation button.active::after {
+  width: 100%; 
+  left: 0; 
+}
+
+.job-card {
+  margin-top: 15px;
+}
