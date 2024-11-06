@@ -12,7 +12,7 @@ Bem-vindo(a)! Vamos configurar e rodar nosso projeto React rapidinho. Segue o pa
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/MarcelleTabosa/lead-management-spa
+   git clone https://github.com/MarcelleTabosa/lead-management-spa.git
    cd repositorio
 
 2. **Instale as dependências:**
