@@ -6,6 +6,7 @@ export const Navbar = styled.nav`
   justify-content: end;
 
   padding: 0.5rem 2rem;
+  font-size: 1rem;
 
   background-color: ${(props) => props.theme.primary};
 `;
@@ -49,7 +50,7 @@ export const ThemeToggleButton = styled.button`
   background-color: transparent;
   color: ${(props) => props.theme.secondary};
   border: none;
-  padding: 8px 16px;
+  padding: 8px;
   cursor: pointer;
 
   &:hover {
