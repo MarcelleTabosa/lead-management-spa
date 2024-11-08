@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Lead.css';
 import { JobProps } from './Props';
 import { getJobs } from '../../services/jobService';
-import Card from './components/Card';
+import Card from './components/Card/Card';
+import TabNavigation from './components/TabNavigation/TabNavigation';
 
 const Lead: React.FC = () => {
 
@@ -38,14 +39,13 @@ const Lead: React.FC = () => {
   return (
     <div className="lead">
             
-      <nav className="tab-navigation">
-        <button onClick={() => setSelectedTab('notAccepted')} className={selectedTab === 'notAccepted' ? 'active' : ''}>
+      <TabNavigation />
+        {/* <button onClick={() => setSelectedTab('notAccepted')} className={selectedTab === 'notAccepted' ? 'active' : ''}>
           Invited
         </button>
         <button onClick={() => setSelectedTab('accepted')} className={selectedTab === 'accepted' ? 'active' : ''}>
           Accepted
-        </button>
-      </nav>
+        </button> */}
 
       <section className="lead-content">
         <div className="job-list">
